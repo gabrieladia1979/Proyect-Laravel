@@ -42,3 +42,19 @@ Cuando un usuario interactúa con una aplicación Laravel, se desencadena un cic
 6. **Respuesta al Cliente:** Finalmente, el servidor envía la respuesta generada (el HTML o el JSON) de vuelta al cliente, completando así el ciclo.
 
 ![image.png](attachment:1dd5d870-f7c5-4b38-a505-b2fed538ca8c:image.png)
+
+### ✨ **Ampliando la Arquitectura Básica**
+
+El flujo MVC puede ser extendido con componentes adicionales muy potentes:
+
+### **Middleware**
+
+Un **Middleware** actúa como un "guardia de seguridad" o un filtro entre la petición del usuario y el Controlador. Permite ejecutar código antes de que la petición llegue a su destino.
+
+- **Ejemplo clásico:** Un middleware de autenticación (`auth`) verifica si el usuario ha iniciado sesión. Si no lo está, lo redirige a la página de login en lugar de permitirle el acceso a una ruta protegida.
+
+### **Observadores (Observers)**
+
+Los **Observadores** permiten "escuchar" eventos que ocurren en los modelos de Eloquent. Se pueden ejecutar acciones automáticamente cuando un registro es creado, actualizado, eliminado, etc.
+
+- **Ejemplo práctico:** Se puede crear un observador para el modelo `User`. Cuando un nuevo usuario se registra (`created` event), el observador puede disparar automáticamente el envío de un correo de bienvenida.
