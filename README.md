@@ -44,8 +44,10 @@ Cuando un usuario interactúa con una aplicación Laravel, se desencadena un cic
     - **Devolver una Vista:** El Controlador pasa los datos a una **Vista (Blade)**. Blade procesa la plantilla, inserta los datos dinámicos y genera un archivo HTML completo.
     - **Devolver una API (JSON):** En aplicaciones de solo *backend* o APIs, el Controlador puede devolver directamente los datos en formato JSON, que será consumido por un *frontend* (como una aplicación en React, Vue o Angular) u otro servicio.
 6. **Respuesta al Cliente:** Finalmente, el servidor envía la respuesta generada (el HTML o el JSON) de vuelta al cliente, completando así el ciclo.
+7. 
 
-![image.png](attachment:1dd5d870-f7c5-4b38-a505-b2fed538ca8c:image.png)
+<img width="1335" height="718" alt="image" src="https://github.com/user-attachments/assets/565b453a-45b9-4f60-b103-a6fca13248d6" />
+
 
 ### ✨ **Ampliando la Arquitectura Básica**
 
