@@ -22,7 +22,8 @@ Es necesario tener las varaibles de entorno configuradas de:
 
 ### Arquitectura MMV
 
-![image.png](attachment:3b2e6845-9109-4fa6-8843-17da55edf1d8:image.png)
+<img width="1244" height="624" alt="image" src="https://github.com/user-attachments/assets/3d56f62f-4ce1-42b2-9c1b-8bdad09fe94b" />
+
 
 En este caso el patrón MVC , arranca con …
 
