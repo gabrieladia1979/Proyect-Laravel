@@ -33,9 +33,13 @@ Laravel implementa una variante del patrón de arquitectura de software **Modelo
 Cuando un usuario interactúa con una aplicación Laravel, se desencadena un ciclo predecible.
 
 1. **Petición del Cliente:** Todo comienza cuando un cliente (un navegador web o_tro sistema) realiza una petición a una URL específica de la aplicación. Por ejemplo, al acceder a `https://mi-blog.com/posts`.
+   
 2. **Enrutamiento (Routing):** La petición es recibida por el **enrutador (router)** de Laravel. Este componente, definido en los archivos de `routes/`, asocia la URL solicitada con una acción específica, generalmente un método dentro de un **Controlador**.
+
 3. **Controlador (Controller):** El enrutador invoca al método del Controlador asignado. Este método contiene la lógica para gestionar la petición. Por ejemplo, si se solicitan los posts de un blog, el controlador se encargará de obtenerlos.
+
 4. **Interacción con el Modelo:** Para obtener los datos, el Controlador se comunica con el **Modelo** correspondiente (ej. `Post.php`). Gracias al **ORM** de Laravel, llamado **Eloquent**, no es necesario escribir consultas SQL manualmente. Simplemente se usan métodos del modelo como `Post::all()` o `Post::find(1)`. Eloquent traduce estas llamadas a código SQL compatible con el sistema de base de datos configurado (MariaDB, en este caso).
+
 5. **Generación de la Respuesta:** Una vez que el Controlador recibe los datos del Modelo, prepara la respuesta para el cliente. Hay dos caminos principales:
     - **Devolver una Vista:** El Controlador pasa los datos a una **Vista (Blade)**. Blade procesa la plantilla, inserta los datos dinámicos y genera un archivo HTML completo.
     - **Devolver una API (JSON):** En aplicaciones de solo *backend* o APIs, el Controlador puede devolver directamente los datos en formato JSON, que será consumido por un *frontend* (como una aplicación en React, Vue o Angular) u otro servicio.
